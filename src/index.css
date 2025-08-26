@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-xxs: 0rem;
+  --breakpoint-xs: 30rem;
+  --breakpoint-2xl: 100rem;
+  --breakpoint-3xl: 120rem;
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*{
+  scroll-behavior: smooth;
+}
+
+body{
+  min-height: 100dvh;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.section{
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: .5;
+  }
+  to {
+    opacity: 1; 
+    scale: 1;
+  }
+}
+
+.section-cards{
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 10%;
+}
+
+@keyframes appear {
+  from {
+    opacity: .2;
+    scale: .4;
+  }
+  to {
+    opacity: 1; 
+    scale: 1;
+  }
+}
+
+.section-cards2{
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: .2;
+  }
+  to {
+    opacity: 1; 
+    scale: 1;
+  }
+}
