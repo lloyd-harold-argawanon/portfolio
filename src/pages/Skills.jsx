@@ -79,14 +79,15 @@ const items = [
   },
 ];
 
-const transformStyles = [
-  "rotate-1 scale-95 hover:scale-110",
-  "-rotate-2 scale-90 hover:scale-110",
-  "rotate-3 scale-100 hover:scale-115",
-  "-rotate-1 scale-95 hover:scale-120",
-  "rotate-2 scale-90 hover:scale-115",
-  "-rotate-3 scale-100 hover:scale-125",
-];
+// const transformStyles = [
+//   "rotate-1 scale-95 hover:scale-110",
+//   "-rotate-2 scale-90 hover:scale-110",
+//   "rotate-3 scale-100 hover:scale-115",
+//   "-rotate-1 scale-95 hover:scale-120",
+//   "rotate-2 scale-90 hover:scale-115",
+//   "-rotate-3 scale-100 hover:scale-125",
+// ];
+// ${transformStyles[index % transformStyles.length]}
 
 
 const Skills = () => (
@@ -97,9 +98,9 @@ const Skills = () => (
     {/* Right content */}
     <div className='grid grid-rows-[auto_1fr] gap-4 p-4'>
       <div className='mx-3'>
-        <GlitchText 
-          speed={2} 
-          enableShadows={true} 
+        <GlitchText
+          speed={2}
+          enableShadows={true}
           enableOnHover={true}
         >
           Skills & Tech Stack
@@ -112,10 +113,10 @@ const Skills = () => (
           <SpotlightCard
             key={index}
             className={`
-              section-cards custom-spotlight-card grid grid-rows-2 backdrop-blur-lg 
-              bg-white/10 scale-75 hover:scale-125 hover:z-20 z-10 transition-transform duration-300 ease-in-out  
-              ${transformStyles[index % transformStyles.length]}`}
-            spotlightColor="rgba(0, 229, 255, 0.2)" 
+              section-cards custom-spotlight-card grid grid-rows-2 backdrop-blur-lg
+              bg-white/10 scale-75 hover:scale-125 hover:z-20 z-10 transition-transform duration-300 ease-in-out
+              `}
+            spotlightColor="rgba(0, 229, 255, 0.2)"
           >
             <h4 className="text:lg lg:text-2xl font-bold flex justify-center items-center gap-2"><span className='text-[rgb(0,189,148)]'>{item.icon}</span>{item.category}</h4>
             <div className="flex flex-wrap justify-center items-center gap-3">
